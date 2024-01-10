@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amr's Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        header h1 {
+            display: inline-block;
+            margin: 0;
+        }
+
+        header h1 span {
+            display: inline-block;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        header h1 .changing-text {
+            display: inline-block;
+            color: #fff;
+            font-style: italic;
+            font-weight: 100;
+            animation: typing 2s steps(40) infinite, blink 0.5s step-end infinite alternate;
+        }
+
+        @keyframes typing {
+            from, to {
+                width: 0;
+            }
+            50% {
+                border-right: 2px solid #fff;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-right-color: transparent;
+            }
+        }
+
+        .navigation-line {
+            height: 5px;
+            background-color: #0056b3;
+            margin-bottom: 20px;
+        }
+
+        .navigation-options {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .navigation-options a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navigation-options a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .content {
+            margin: 20px auto; /* Centering content */
+            max-width: 800px; /* Adjust as needed */
+        }
+
+        section {
+            margin: 20px auto; /* Centering sections */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        section.closed {
+            max-height: 50px;
+            padding: 0 20px;
+            margin: 0 auto; /* Centering closed sections */
+            overflow: hidden;
+        }
+
+        section h2 {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        section h2::after {
+            content: '\25BC';
+            font-size: 20px;
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        section.closed h2::after {
+            transform: rotate(180deg);
+        }
+
+        h1, h2, h3 {
+            color: #007bff;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #007bff;
+        }
+
+        .contact-box {
+            margin: 20px auto; /* Centering contact box */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px; /* Adjust as needed */
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .contact-info a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>
+            <span>I am </span>
+            <span class="changing-text"></span>
+        </h1>
+    </header>
+
+    <!-- Navigation Line -->
+    <div class="navigation-line"></div>
+
+    <!-- Navigation Options -->
+    <div class="navigation-options">
+        <a href="#about">About Me</a>
+        <a href="blog.html">Blog</a>
+    </div>
+
+    <div class="content">
+        <section id="about" class="open">
+            <h2>About Me</h2>
+            <p class="lead">Hey, it's Amr, and I am a dreamer who loves learning, trying new things, giving myself a chance to fail, forcing myself out of my territories, and believing it opens doors to new opportunities that would never happen if I stayed afraid of taking some risk. I'm not perfect, and won't be, but I'm grinding to be a better me, aiming to be that pop of color in a world that sometimes looks too black and white.</p>
+        </section>
+
+        <!-- Add other sections and content here -->
+
+        <section id="projects" class="closed">
+            <h2>Projects</h2>
+            <!-- Add your project details here -->
+        </section>
+
+        <section id="internships" class="closed">
+            <h2>Internships</h2>
+            <!-- Add your internship details here -->
+        </section>
+
+        <section id="achievements" class="closed">
+            <h2>Achievements</h2>
+            <!-- Add your achievements here -->
+        </section>
+
+        <section id="education" class="closed">
+            <h2>Education</h2>
+            <!-- Add your education details here -->
+        </section>
+
+        <div class="contact-box">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <a href="tel:+201050010066">
+                    <i class="fas fa-phone"></i> +201050010066
+                </a>
+                <a href="https://www.linkedin.com/in/amr-kelhamady-rs2007" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="mailto:Amro.162016@stemredsea.moe.edu.eg">
+                    <i class="far fa-envelope"></i> Amro.162016@stemredsea.moe.edu.eg
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var sections = document.querySelectorAll('section');
+            var changingText = document.querySelector('.changing-text');
+            var words = ['Amr', 'Developer', 'Volunteer', 'Researcher', 'Entrepreneur', 'Writer', 'Dreamer'];
+
+            sections.forEach(function (section) {
+                var heading = section.querySelector('h2');
+                heading.addEventListener('click', function () {
+                    section.classList.toggle('closed');
+                });
+            });
+
+            function changeWord() {
+                var currentIndex = 0;
+
+                setInterval(function () {
+                    changingText.textContent = words[currentIndex];
+                    currentIndex = (currentIndex + 1) % words.length;
+                }, 2000);
+            }
+
+            changeWord();
+        });
+    </script>
+</body>
+</html>
